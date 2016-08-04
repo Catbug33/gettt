@@ -25,9 +25,8 @@ for i in xrange(routes_available):
     wagen_klass_locator_iter = routes_available_locator + '[{0}]'.format(i + 1)
     wagen_klass_locator = wagen_klass_locator_iter + '/td[@class="place"]/div'
     train_num = driver.find_element_by_xpath(wagen_klass_locator_iter + '/td[@class="num"]/a').get_attribute('innerHTML')
-    
     # Train num
-    # print train_num
+    print train_num
     # wagen_klass_number = len(driver.find_elements_by_xpath(wagen_klass_locator_iter + '/td[@class="place"]/div'))
     # print wagen_klass_number
     # for j in xrange(wagen_klass_number):
