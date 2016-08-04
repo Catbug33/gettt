@@ -27,13 +27,11 @@ for i in xrange(routes_available):
     train_num = driver.find_element_by_xpath(wagen_klass_locator_iter + '/td[@class="num"]/a').get_attribute('innerHTML')
     # Train num
     print train_num
-    # wagen_klass_number = len(driver.find_elements_by_xpath(wagen_klass_locator_iter + '/td[@class="place"]/div'))
-    # print wagen_klass_number
-    # for j in xrange(wagen_klass_number):
-    #     print driver.find_element_by_xpath(wagen_klass_locator + '[' + str(j + 1) + ']').get_attribute('title'), ':', \
-    #         driver.find_element_by_xpath(wagen_klass_locator + '[' + str(j + 1) + ']/b').get_attribute('innerHTML').\
-    #         decode('utf8')
-
+    wagen_klass_number = len(driver.find_elements_by_xpath(wagen_klass_locator_iter + '/td[@class="place"]/div'))
+    print wagen_klass_number
+    for j in xrange(wagen_klass_number):
+        print driver.find_element_by_xpath(wagen_klass_locator + '[' + str(j + 1) + ']').get_attribute('title'), ':', \
+            driver.find_element_by_xpath(wagen_klass_locator + '[' + str(j + 1) + ']/b').get_attribute('innerHTML')
 driver.save_screenshot('1.png')
 
 driver.close()
